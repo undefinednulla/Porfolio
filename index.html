@@ -9,14 +9,88 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <!-- link css files -->
-    <link rel="stylesheet" href="./assets/css/app.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/app.min.css">
+    <title>Porfolio Hai Dang</title>
 </head>
 
 <body>
-    <header></header>
-    <section></section>
-    <footer></footer>
+    <header class="header">
+        <nav class="navication container">
+            <div class="navication__logo">
+                <img src="./assets/images/navication/Logo.svg" alt="">
+            </div>
+            <div class="navication__links">
+                <ul>
+                    <li class="links__item active"><a href="#!">Home</a></li>
+                    <li class="links__item"><a href="#!">Pages</a></li>
+                    <li class="links__item"><a href="#!">Blog</a></li>
+                    <li class="links__item"><a href="#!">Portfolio</a></li>
+                </ul>
+            </div>
+            <div class="navication__boxButton">
+                <button class="button--20 button--secondary">
+                    <img src="./assets/images/navication/sun.svg" alt="">
+                </button>
+                <button class="button--20 button--primary">
+                    <div class="text">Hear Me</div>
+                </button>
+            </div>
+        </nav>
+        <div class="hero container">
+            <div class="hero__content">
+                <h1>I'm a UI Designer, Professional Font-End Developer</h1>
+                <p>This website is about me and my work,
+                    including UX/UI design and Web Programming you can hire me here</p>
+                <button class="button--20 button--primary">
+                    <div class="text">Download my CV</div>
+                    <ion-icon name="arrow-down-circle-outline"></ion-icon>
+                </button>
+            </div>
+            <div class="hero__sub--content">
+                <img src="https://images.unsplash.com/photo-1641155785005-ffeb605006d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+                    alt="">
+            </div>
+        </div>
+        <div class="work container">
+            <div class="box">
+                <div class="item">
+                    <div class="item__icon">
+                        <img src="./assets/images/work/icon-1.svg" alt="">
+                    </div>
+                    <div class="item__content">
+                        <h3 class="item__title">UI Design</h3>
+                        <p class="item__text">I can design the interface of a website or a desktop and mobile
+                            application.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__icon">
+                        <img src="./assets/images/work/icon-2.svg" alt="">
+                    </div>
+                    <div class="item__content">
+                        <h3 class="item__title">Web Programming</h3>
+                        <p class="item__text">I am fluent in Reactjs, Redux, Sass, Grahql and write website code, React
+                            Native to code mobile apps.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="item__icon">
+                        <img src="./assets/images/work/icon-3.svg" alt="">
+                    </div>
+                    <div class="item__content">
+                        <h3 class="item__title">Apps To Work</h3>
+                        <p class="item__text">I use Photoshop, Figma, Sketch for photo editing and UI creation, After
+                            Effects
+                            for video editing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <script src="./assets/script/app.js"></script>
 </body>
 
