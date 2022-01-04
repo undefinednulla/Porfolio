@@ -1,0 +1,234 @@
+.message {
+    background-color: var(--background-light-gray);
+    &__box {
+        padding: 90px 0;
+    }
+    &__button {
+        padding: 70px 0;
+        background-color: var(--background-light);
+        border-radius: 10px;
+        text-align: center;
+        margin-bottom: 50px;
+        .title {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 35px;
+        }
+        .span {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.2;
+            color: var(--text-gray);
+            margin-bottom: 50px;
+        }
+        button {
+            margin: 0 auto;
+        }
+    }
+    &__form {
+        background-color: var(--background-light);
+        border-radius: 10px;
+        padding: 55px 85px;
+        display: flex;
+        flex-wrap: wrap;
+        textarea,
+        input,
+        textarea::placeholder,
+        input::placeholder {
+            font-family: $font;
+            font-weight: 500;
+            line-height: 1.2;
+            font-size: 14px;
+            color: #858a8f;
+        }
+        textarea,
+        input {
+            color: var(--text-dark);
+            cursor: text;
+        }
+        .ml {
+            margin-left: 20px;
+        }
+        .mr {
+            margin-right: 20px;
+        }
+        .title {
+            // flex-grow: 1;
+            width: 100%;
+            font-size: 60px;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 53px;
+        }
+        .group--input--full,
+        .group--input {
+            width: calc(50% - 20px);
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+            label {
+                line-height: 1.2;
+                font-weight: 600;
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+            input {
+                border: 2px solid #f5f6fa;
+                outline: none;
+                padding: 20px 30px;
+                border-radius: 7px;
+            }
+        }
+        .group--input--full {
+            width: 100%;
+            .group {
+                display: flex;
+                input {
+                    flex-grow: 1;
+                    margin-right: 20px;
+                }
+            }
+        }
+        .message--input {
+            width: 100%;
+            textarea {
+                width: 100%;
+                height: 300px;
+                border: 2px solid #f5f6fa;
+                outline: none;
+                padding: 20px 30px;
+                border-radius: 7px;
+                resize: none;
+            }
+        }
+        .group--submit {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .term {
+                display: flex;
+                align-items: center;
+                position: relative;
+                label {
+                    margin-left: 20px;
+                    line-height: 1.2;
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: #858a8f;
+                }
+                #term {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    opacity: 0;
+                    width: 0px;
+                    height: 0px;
+                }
+                .checkmark {
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 5px;
+                    background-color: #e5f1ff;
+                    ion-icon {
+                        font-size: 18px;
+                        color: #377dff;
+                        transform: scale(1);
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                    .opacity {
+                        opacity: 0;
+                        transform: scale(0);
+                        visibility: hidden;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include maxW(375px) {
+    .message {
+        &__box {
+            padding: 20px 0;
+        }
+        &__button {
+            padding: 35px 15px;
+            .title {
+                font-size: 32px;
+                margin-bottom: 15px;
+            }
+            .span {
+                font-size: 12px;
+            }
+        }
+        &__form {
+            // display: none;
+            flex-direction: column;
+            padding: 35px 15px;
+            .mr,
+            .ml {
+                margin: 0;
+            }
+            .group--input--full,
+            .group--input {
+                width: 100%;
+                margin-bottom: 20px;
+                label {
+                    margin-bottom: 15px;
+                    font-size: 14px;
+                }
+                input {
+                    padding: 10px 20px;
+                    &::placeholder {
+                        font-size: 12px;
+                    }
+                }
+            }
+            .group--input--full {
+                .group {
+                    input:disabled {
+                        // display: none;
+                        width: 50%;
+                        &::placeholder {
+                            font-size: 12px;
+                            line-height: 1.2;
+                        }
+                    }
+                }
+            }
+            .message--input {
+                width: 100%;
+                margin-bottom: 20px;
+                label {
+                    margin-bottom: 15px;
+                    font-size: 14px;
+                }
+                textarea {
+                    padding: 10px 20px;
+                    height: 100px;
+                    &::placeholder {
+                        font-size: 12px;
+                    }
+                }
+            }
+
+            .group--submit {
+                flex-direction: column;
+                align-items: flex-start;
+                .term {
+                    margin-bottom: 15px;
+                    label {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+}
