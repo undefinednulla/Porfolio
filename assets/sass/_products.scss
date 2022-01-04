@@ -1,5 +1,6 @@
 .products {
     padding: 90px 0 30px;
+    background-color: var(--background-light);
     &__box {
         display: flex;
         justify-content: space-between;
@@ -27,7 +28,7 @@
         }
         .text {
             padding-bottom: 45px;
-            border-bottom: 2px solid #f5f6fa;
+            border-bottom: 2px solid var(--gray);
             margin-bottom: 45px;
             p {
                 color: var(--text-gray);
@@ -39,7 +40,7 @@
         }
         .infor {
             padding-bottom: 20px;
-            border-bottom: 2px solid #f5f6fa;
+            border-bottom: 2px solid var(--gray);
             .item {
                 display: flex;
                 align-items: flex-start;
